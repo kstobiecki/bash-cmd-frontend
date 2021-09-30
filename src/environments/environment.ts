@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  bashApi: {
+    url: 'http://localhost:9000/api/',
+    endpoints: {
+      runCommand: 'run-cmd',
+      getResults: 'results',
+    },
+  },
 };
 
 /*
