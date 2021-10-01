@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { BashApiService } from '../../services';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { BashResultInterface } from '../../interfaces';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -21,7 +21,7 @@ export class CommandHandlerComponent implements OnInit, OnDestroy {
 
   constructor(private bashApiSerice: BashApiService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     const commandSubscription = this.command?.valueChanges.subscribe(
       () => (this.badCommand = ''),
     );
@@ -32,11 +32,11 @@ export class CommandHandlerComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
-  get command() {
+  get command(): AbstractControl | null {
     return this.bashCommandForm.get('command');
   }
 
-  onSubmit() {
+  onSubmit(): void {
     this.loading = true;
     const command = this.bashCommandForm.get('command')?.value;
     const commandSubscription = this.bashApiSerice
