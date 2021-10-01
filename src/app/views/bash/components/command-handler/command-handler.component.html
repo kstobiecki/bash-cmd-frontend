@@ -17,7 +17,9 @@
       </div>
       <button type="submit" [disabled]="command?.errors?.required">
         <span *ngIf="!loading; else showSpinner">Submit</span>
-        <ng-template #showSpinner><mat-spinner [diameter]="20"></mat-spinner></ng-template>
+        <ng-template #showSpinner>
+          <mat-spinner [diameter]="20"></mat-spinner>
+        </ng-template>
       </button>
     </div>
   </div>
