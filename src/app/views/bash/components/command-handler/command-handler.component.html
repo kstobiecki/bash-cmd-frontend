@@ -1,1 +1,22 @@
-<div>cmd handler</div>
+<form [formGroup]="bashCommandForm" (ngSubmit)="onSubmit()">
+  <div class="command-handler">
+    <label for="command">Command: </label>
+    <input id="command" type="text" formControlName="command" required>
+    <div *ngIf="command?.invalid && (command?.dirty || command?.touched)">
+      <div *ngIf="command?.errors?.required">
+        Name is required.
+      </div>
+    </div>
+    <div *ngIf="badCommand.length">
+      {{ badCommand }}
+    </div>
+    <button type="submit" [disabled]="command?.errors?.required">
+      <span *ngIf="!loading; else showSpinner">Submit</span>
+      <ng-template #showSpinner><mat-spinner></mat-spinner></ng-template>
+    </button>
+  </div>
+  <div class="result-handler">
+    <label for="result">Result: </label>
+    <textarea readonly id="result" type="text" formControlName="result"></textarea>
+  </div>
+</form>

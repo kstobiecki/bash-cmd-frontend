@@ -1,9 +1,5 @@
-import { CommandHistoryComponent } from './command-history/command-history.component';
 import { CommandHandlerComponent } from './command-handler/command-handler.component';
 
-export const BashComponents = [
-  CommandHistoryComponent,
-  CommandHandlerComponent,
-];
+export const BashComponents = [CommandHandlerComponent];
 
-export { CommandHistoryComponent, CommandHandlerComponent };
+export { CommandHandlerComponent };
