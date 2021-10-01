@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+
+  bash-cmd-frontend:
+    container_name: bash-cmd-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '80:80'
+    environment:
+      - NODE_ENV=production
