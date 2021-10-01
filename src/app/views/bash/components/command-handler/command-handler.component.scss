@@ -1,0 +1,78 @@
+$base-color: #302b63;
+
+@mixin base-border {
+  border-radius: 5px;
+  border: 1px solid $base-color;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  color: $base-color;
+
+  label {
+    font-size: 23px;
+    margin-bottom: 5px;
+  }
+
+  .command-handler-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    .command-handler-form {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      button {
+        @include base-border;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+        width: 60px;
+        height: 28px;
+        background: white;
+        color: $base-color;
+      }
+
+      .command-handler-input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        input {
+          @include base-border;
+          width: 100%;
+          outline: none;
+          font-size: 20px;
+          padding-left: 10px;
+        }
+
+        .command-form-error-message {
+          height: 25px;
+        }
+      }
+    }
+  }
+
+  .result-handler {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 70%;
+
+    textarea {
+      @include base-border;
+      resize: none;
+      outline: none;
+      height: 100%;
+      font-size: 20px;
+    }
+  }
+}
