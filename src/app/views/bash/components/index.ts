@@ -1,5 +1,5 @@
-import { CommandHandlerComponent } from './command-handler/command-handler.component';
+import { CommandComponent } from './command-handler/command.component';
 
-export const BashComponents = [CommandHandlerComponent];
+export const BashComponents = [CommandComponent];
 
-export { CommandHandlerComponent };
+export { CommandComponent };

@@ -48,7 +48,7 @@ form {
         }
       }
 
-      .command-handler-input {
+      .command-handler-form-input {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -61,7 +61,7 @@ form {
           padding-left: 10px;
         }
 
-        .command-form-error-message {
+        .command-handler-form-error-message {
           height: 25px;
           color: red;
         }
@@ -73,7 +73,7 @@ form {
     }
   }
 
-  .result-handler {
+  .result-handler-container {
     display: flex;
     flex-direction: column;
     width: 80%;

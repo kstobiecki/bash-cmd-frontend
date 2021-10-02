@@ -1,16 +1,21 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { BashApiService } from '../../services';
-import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
+import {
+  AbstractControl,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { BashResultInterface } from '../../interfaces';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ErrorEnum, ErrorMessageEnum } from '../../../../common/enums';
 @Component({
-  selector: 'app-command-handler',
-  templateUrl: './command-handler.component.html',
-  styleUrls: ['./command-handler.component.scss'],
+  selector: 'app-command',
+  templateUrl: './command.component.html',
+  styleUrls: ['./command.component.scss'],
 })
-export class CommandHandlerComponent implements OnInit, OnDestroy {
+export class CommandComponent implements OnInit, OnDestroy {
   private subscription: Subscription = new Subscription();
   public badCommand = '';
   public loading = false;

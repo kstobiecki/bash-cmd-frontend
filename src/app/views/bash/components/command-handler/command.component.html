@@ -2,9 +2,9 @@
   <div class="command-handler-container">
     <label for="command">Command: </label>
     <div class="command-handler-form">
-      <div class="command-handler-input">
+      <div class="command-handler-form-input">
         <input id="command" type="text" formControlName="command" required>
-        <div class="command-form-error-message">
+        <div class="command-handler-form-error-message">
           <div *ngIf="command?.invalid && (command?.dirty || command?.touched)">
             <div *ngIf="command?.errors?.required">
               Name is required.
@@ -23,7 +23,7 @@
       </button>
     </div>
   </div>
-  <div class="result-handler">
+  <div class="result-handler-container">
     <label for="result">Result: </label>
     <textarea readonly id="result" type="text" formControlName="result"></textarea>
   </div>
