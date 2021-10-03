@@ -7,7 +7,7 @@
         <div class="command-handler-form-error">
           <div *ngIf="command?.invalid && (command?.dirty || command?.touched)">
             <div class="command-handler-form-error-message" *ngIf="command?.errors?.required">
-              Name is required.
+              Command is required.
             </div>
           </div>
           <div class="command-handler-form-bad-command" *ngIf="badCommand.length">
